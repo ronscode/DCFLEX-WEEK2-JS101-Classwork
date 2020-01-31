@@ -1,6 +1,6 @@
 // QUESTION #1
 
-console.log("#1");
+console.log("#1 we know it works, now student try");
 
 // 1. Most common birth year
 
@@ -68,7 +68,7 @@ function bestTimeForCountry(times) {
     var currentCountryTime = currentTime.time;
 
     if (!bestTimes[currentTime.country]) {
-      bestTimes[currentTime.country] = currentTime.time;
+      bestTimes[currentTime.country] = currentTime[time];
     } else if (currentCountryTime < bestTimes[currentTime.country]) {
       bestTimes[currentTime.country] = currentTime.time;
     }
@@ -85,7 +85,7 @@ bestTimeForCountry(raceResults);
 
 console.log("#4")
 
-listOfNum = [-1, 5, -25, -3, 99, 20];
+listOfNum = [-1, 5, -25, -3, 99, 20,];
 
 function countOddEven(mixOfNums) {
   var even = 0;
