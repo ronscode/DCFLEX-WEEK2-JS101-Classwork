@@ -1,4 +1,8 @@
 # DCFLEX-WEEK2-JS101-Classwork
-Solutions to the 8 problems from the lecture. 
+Solutions to most of the JS101 exercises. 
 
-To run the solutions download the file and type "node classwork1.js" in terminal. 
+To run each of solutions download the file and type "node filename.js" into terminal inside VS Code. 
+
+These aren't the only way to solve these problems, just one example. 
+
+
