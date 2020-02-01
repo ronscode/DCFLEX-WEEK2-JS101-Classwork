@@ -8,6 +8,9 @@
 // > cipher('We hold these truths to be self-evident', 8)
 // 'em pwtl bpmam bzcbpa bw jm amtn-mdqlmvb'
 
+
+
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "decipher" which is given a string, a shift, and returns the
 // decoded Caesar cipher message.
@@ -18,7 +21,7 @@
 // > decipher('ehz czlod otgpcrpo ty l hzzo', 11)
 // 'two roads diverged in a wood'
 
-console.log('cipher')
+console.log("Cipher 2");
 
 function cipher(string, offset) {
 
@@ -29,15 +32,14 @@ function cipher(string, offset) {
   for (var i = 0; i < string.length; i++) {
     var currentLetter = string[i];
 
+    if (currentLetter === " ") {
+      encodedString += " "
+      continue;
+    }
+
     var indexOfCurrentLetter = alphabet.indexOf(currentLetter);
 
     var newLetterIndex = indexOfCurrentLetter + offset;
-
-    var newLetter = alphabet[newLetterIndex];
-    if (currentLetter === ' ') {
-      encodedString += ' '
-    }
-    encodedString += newLetter;
 
     if (newLetterIndex > 25) {
       newLetterIndex = newLetter + 25;
@@ -46,14 +48,15 @@ function cipher(string, offset) {
     }
 
 
+    var newLetter = alphabet[newLetterIndex];
+
+    encodedString += newLetter;
   }
-  console.log("the secret message is " + encodedString)
+  console.log(encodedString)
   return encodedString;
 }
 
 cipher("attack at dawn", 2)
-
-
 
 
 function decipher(string, offset) {
@@ -65,14 +68,14 @@ function decipher(string, offset) {
   for (var i = 0; i < string.length; i++) {
     var currentLetter = string[i];
 
+    if (currentLetter === " ") {
+      encodedString += " "
+      continue;
+    }
+
     var indexOfCurrentLetter = alphabet.indexOf(currentLetter);
 
     var newLetterIndex = indexOfCurrentLetter - offset;
-
-    if (currentLetter === " ") {
-      encodedString += " "
-    }
-    encodedString += newLetter;
 
     if (newLetterIndex > 25) {
       newLetterIndex = newLetter + 25;
@@ -83,8 +86,9 @@ function decipher(string, offset) {
 
     var newLetter = alphabet[newLetterIndex];
 
+    encodedString += newLetter;
   }
-  console.log("The decrypted message is " + encodedString)
+  console.log(encodedString)
   return encodedString;
 }
 
