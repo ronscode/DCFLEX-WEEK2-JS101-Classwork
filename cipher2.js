@@ -23,14 +23,14 @@
 
 console.log("Cipher 2");
 
-function cipher(string, offset) {
+function cipher(secretString, offset) {
 
   var alphabet = "abcdefghijklmnopqrztuvwxyz";
 
   var encodedString = "";
 
-  for (var i = 0; i < string.length; i++) {
-    var currentLetter = string[i];
+  for (var i = 0; i < secretString.length; i++) {
+    var currentLetter = secretString[i];
 
     if (currentLetter === " ") {
       encodedString += " "
@@ -59,14 +59,14 @@ function cipher(string, offset) {
 cipher("attack at dawn", 2)
 
 
-function decipher(string, offset) {
+function decipher(secretString, offset) {
 
   var alphabet = "abcdefghijklmnopqrztuvwxyz";
 
   var encodedString = "";
 
-  for (var i = 0; i < string.length; i++) {
-    var currentLetter = string[i];
+  for (var i = 0; i < secretString.length; i++) {
+    var currentLetter = secretString[i];
 
     if (currentLetter === " ") {
       encodedString += " "
