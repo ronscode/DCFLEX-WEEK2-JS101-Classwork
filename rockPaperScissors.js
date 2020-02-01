@@ -7,47 +7,27 @@
 // rockPaperScissors('rock', 'paper') --> 'player 2'
 // rockPaperScissors('paper', 'paper') --> 'draw'
 
+console.log('Lets play RPS')
 
 function rockPaperScissors(player1, player2) {
+
   var plays = ["rock", "scissors", "paper"];
-
-  if (player1 == "rock") {
-      else if (player1 == "scissors") {
-    }
+  // Checking to see if player one beats player one's throw
+  if (player1 == "rock" && player2 == "scissors" || player1 == "scissors" && player2 == "paper" || player1 == "paper" && player2 == "rock") {
+    console.log('Player 1 wins!')
+    // Checking to see if player two beats player one's throw
+  } else if (player2 == "rock" && player1 == "scissors" || player2 == "scissors" && player1 == "paper" || player2 == "paper" && player1 == "rock") {
+    console.log('Player 2 wins!')
+    // If they are the same the game is a tie
+  } else if (player1 == player2) {
+    console.log('The game is a tie!');
   }
-
-  var player1Index = plays.indexOf(player1);
-  var player2Index = plays.indexOf(player2);
-
 }
 
-// rock vs paper -->     0, 2
-// rock vs scissors -->  0, 1
+
+rockPaperScissors('rock', 'rock')
 
 
 
-// Another another way
-
-var possiblePlays = ["rock", "scissors", "paper"];
-
-var indexOfPlayer1 = possiblePlays.indexOf(player1);
-
-
-///
-
-
-var rock = {
-  value: "rock"
-}
-var paper = {
-  value: "paper"
-}
-var scissors = {
-  value: "scissors"
-}
-
-rock.beats = scissors;
-rock.getsBeatBy = paper;
-paper.beats = rock;
 
 
